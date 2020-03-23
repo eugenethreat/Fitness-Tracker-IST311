@@ -28,7 +28,6 @@ public class FitnessController {
         User toTest = new User(user, pw);
         boolean success = login.test(toTest);
         if(success){
-            System.out.println("worked");
             view.loggedIn(user);
         } else{
             view.failed();
