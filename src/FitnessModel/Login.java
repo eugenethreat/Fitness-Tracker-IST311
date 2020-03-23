@@ -2,34 +2,32 @@ package FitnessModel;
 
 import FitnessModel.User;
 
+import java.util.ArrayList;
+
 public class Login {
-    User user;
-    
-    public Login(User user){
-        this.user = user;
+
+    ArrayList<User> testUsers = new ArrayList<User>;
+
+    public Login(){
+        makeSomeArbitraryUsers();
+
+
+
+    }//this class checks entered credentials
+
+    private void makeSomeArbitraryUsers() {
+        User someUser1 = new User("eugener", "1234");
+        User someUser2 = new User("Nick Hunter", "1234");
+        User someUser3 = new User("Noelle Fajt", "5678");
+        User someUser4 = new User("Wilson Hafner", "1010");
+
+        testUsers.add(someUser1);
+        testUsers.add(someUser2);
+        testUsers.add(someUser3);
+        testUsers.add(someUser4);
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-    
-    public void test(String username, String password){
-        if(username.equals(user.getUsername()) && password.equals(user.getPassword())){
-            System.out.println("Welcome!");
-        }
-        else if(!username.equals(user.getUsername())){
-            System.out.println("Incorrect credentials.");
-        }
-        else if(!password.equals(user.getPassword())){
-            System.out.println("Incorrect credentials.");
-        }
-        else if(!password.equals(user.getPassword()) && !username.equals(user.getUsername())){
-            System.out.println("Incorrect credentials.");
-            
-        }
+    public void test(User user){
+        //todo : check credentials from the passed user.
     }
 }

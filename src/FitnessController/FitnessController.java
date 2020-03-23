@@ -12,7 +12,7 @@ public class FitnessController {
     public FitnessController() {
 
         User user = new User("nixxel", "dirtbag");
-        Login login = new Login(user);
+        Login login = new Login();
         login.test("nxxel", "di");
 
 

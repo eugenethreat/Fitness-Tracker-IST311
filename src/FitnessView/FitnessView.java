@@ -16,4 +16,13 @@ public class FitnessView {
         System.out.println("please enter username and password when prompted");
     }
 
+    public static void newUser(){
+        System.out.println("TODO: NEW USER");
+    }
+
+    public static void exit(){
+        System.out.println("exiting!...");
+    }
+
+
 }
