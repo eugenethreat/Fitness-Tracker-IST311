@@ -1,9 +1,10 @@
+package FitnessModel;
 
-public class UserInfo {
+public class User {
     private String username;
     private String password;
-    
-    public UserInfo(String username, String password){
+
+    public User(String username, String password) {
         this.password = password;
         this.username = username;
     }
@@ -23,6 +24,6 @@ public class UserInfo {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-    
+
+
 }

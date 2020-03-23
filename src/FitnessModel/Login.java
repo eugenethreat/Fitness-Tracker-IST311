@@ -1,16 +1,19 @@
+package FitnessModel;
+
+import FitnessModel.User;
 
 public class Login {
-    UserInfo user;
+    User user;
     
-    public Login(UserInfo user){
+    public Login(User user){
         this.user = user;
     }
 
-    public UserInfo getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(UserInfo user) {
+    public void setUser(User user) {
         this.user = user;
     }
     
