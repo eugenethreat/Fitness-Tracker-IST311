@@ -3,7 +3,7 @@ package FitnessView;
 
 public class FitnessView {
 
-    public static void welcomeScreen(){
+    public void welcomeScreen() {
         System.out.println("welcome to our fitness app for IST311");
         System.out.println("select an option below by entering the corresponding number");
         System.out.println("1: login");
@@ -11,16 +11,16 @@ public class FitnessView {
         System.out.println("3: exit");
     }
 
-    public static void login(){
+    public void login() {
         System.out.println("1: Login");
         System.out.println("please enter username and password when prompted");
     }
 
-    public static void newUser(){
+    public void newUser() {
         System.out.println("TODO: NEW USER");
     }
 
-    public static void exit(){
+    public void exit() {
         System.out.println("exiting!...");
     }
 

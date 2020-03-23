@@ -6,13 +6,10 @@ import java.util.ArrayList;
 
 public class Login {
 
-    ArrayList<User> testUsers = new ArrayList<User>;
+    ArrayList<User> testUsers = new ArrayList<User>();
 
     public Login(){
         makeSomeArbitraryUsers();
-
-
-
     }//this class checks entered credentials
 
     private void makeSomeArbitraryUsers() {
