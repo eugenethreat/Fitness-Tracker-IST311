@@ -1,14 +1,12 @@
 package FitnessModel;
 
-import FitnessModel.User;
-
 import java.util.ArrayList;
 
 public class Login {
 
     ArrayList<User> testUsers = new ArrayList<User>();
 
-    public Login(){
+    public Login() {
         makeSomeArbitraryUsers();
     }//this class checks entered credentials
 
@@ -24,7 +22,20 @@ public class Login {
         testUsers.add(someUser4);
     }
 
-    public void test(User user){
+    public boolean test(User user) {
         //todo : check credentials from the passed user.
+        boolean exists = false;
+
+        for (int i = 0; i < testUsers.size(); ++i) {
+            if (user.getUsername().equals(testUsers.get(i).getUsername())) {
+
+                if (user.getPassword().equals(testUsers.get(i).getPassword())) {
+                    exists = true;
+                }
+
+            }
+        }//if the username is equal, checks the password. else, exits.
+
+        return exists;
     }
 }

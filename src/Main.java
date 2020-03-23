@@ -13,8 +13,16 @@ public class Main {
         int userChoice = scan.nextInt();
         ft.getUserChoice(userChoice);
 
+        if(userChoice == 1){
+            scan.nextLine(); //clearing the buffer of any stray newline characters
+            System.out.println("username");
+            String username = scan.nextLine();
+            System.out.println("password");
+            String password = scan.nextLine();
 
-
+            ft.tryToLogIn(username, password);
+        }
 
     }
+
 }

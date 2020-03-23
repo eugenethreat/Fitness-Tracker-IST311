@@ -25,4 +25,11 @@ public class FitnessView {
     }
 
 
+    public void loggedIn(String user) {
+        System.out.println("Welcome, " + user + "!");
+    }
+
+    public void failed() {
+        System.out.println("there was some sort of error!");
+    }
 }
