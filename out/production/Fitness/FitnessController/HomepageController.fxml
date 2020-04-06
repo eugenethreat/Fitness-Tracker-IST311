@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="FitnessController.HomepageController"
+            fx:id="fitnessController"
+            >
+
+
+
+        <padding>
+            <Insets left="10.0" right="10.0" top="10.0"/>
+        </padding>
+
+
+        <Hyperlink id="label1" layoutX="14.0" layoutY="67.0" text="go to survey" onAction="#goToSurvey"/>
+
+        <Label id="label1" layoutX="14.0" layoutY="139.0" text="gua"/>
+
+
+</AnchorPane>
+
+
+

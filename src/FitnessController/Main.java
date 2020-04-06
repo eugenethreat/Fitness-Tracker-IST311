@@ -2,6 +2,7 @@ package FitnessController;
 
 import FitnessModel.User;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
@@ -26,49 +27,50 @@ public class Main extends Application {
     private final double MINIMUM_WINDOW_WIDTH = 390.0;
     private final double MINIMUM_WINDOW_HEIGHT = 500.0;
 
+    private Main application;
 
 
     @Override
     public void start(Stage firstStage) throws Exception {
 
         try {
-
             stage = firstStage;
             stage.setTitle("fitness group project");
             stage.setMinWidth(MINIMUM_WINDOW_WIDTH);
             stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
             stage.show();
 
-
             LoginController ft = (LoginController) replaceSceneContent("LoginController.fxml");
-
-            //Scanner scan = new Scanner(System.in);
-
-            //LoginController ft = new LoginController(this);
-            //ft.loggingIn();
-
-            //int userChoice = scan.nextInt();
-
-            //ft.getUserChoice(userChoice);
-/*
-            if (userChoice == 1) {
-                scan.nextLine(); //clearing the buffer of any stray newline characters
-                System.out.println("username");
-                String username = scan.nextLine();
-                System.out.println("password");
-                String password = scan.nextLine();
-
-                ft.tryToLogIn(username, password);
-            }
-*/
-
-
+            ft.setApp(this);
 
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
+
+    public void gotoHome() {
+        try {
+            HomepageController home = (HomepageController) replaceSceneContent("HomepageController.fxml");
+            home.setApp(this);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void gotoSurvey(){
+        try {
+            goalSurvey goals = (goalSurvey) replaceSceneContent("SkillLevel.fxml");
+            System.out.println("where am I");
+            goals.setApp(this);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
 
     private Initializable replaceSceneContent(String fxml) throws Exception {
         FXMLLoader loader = new FXMLLoader();
@@ -87,5 +89,6 @@ public class Main extends Application {
         stage.sizeToScene();
         return (Initializable) loader.getController();
     }
+
 
 }

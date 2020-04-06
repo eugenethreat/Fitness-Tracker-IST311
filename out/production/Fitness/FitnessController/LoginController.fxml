@@ -5,8 +5,8 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <?import javafx.geometry.Insets?>
+
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="FitnessController.LoginController"
@@ -19,11 +19,14 @@
 
 
     <Label id="label1" layoutX="14.0" layoutY="67.0" text="Username"/>
-    <TextField id="textField1" fx:id="userId" layoutY="86.0" prefWidth="415.0" AnchorPane.leftAnchor="10.0"
+    <TextField id="textField1" fx:id="usernameField" layoutY="86.0" prefWidth="415.0" AnchorPane.leftAnchor="10.0"
                AnchorPane.rightAnchor="0.0"/>
     <Label id="label1" layoutX="14.0" layoutY="139.0" text="Password"/>
-    <PasswordField id="passwordField1" fx:id="password" layoutY="157.0" prefWidth="415.0"
+    <PasswordField id="passwordField1" fx:id="passwordField" layoutY="157.0" prefWidth="415.0"
                    AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0"/>
 
+    <Button id="loginButton" onAction="#tryToLoginFX" fx:id="loginButton" layoutX="14.0" layoutY="200.0" text="Login" prefWidth="200.0"
+            AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0"/>
+    <!-- LOGIN BUTTON -->
 
 </AnchorPane>
