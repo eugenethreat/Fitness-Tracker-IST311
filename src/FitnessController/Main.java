@@ -24,8 +24,7 @@ public class Main extends Application {
 
     private Stage stage;
     private User loggedUser;
-    private final double MINIMUM_WINDOW_WIDTH = 390.0;
-    private final double MINIMUM_WINDOW_HEIGHT = 500.0;
+
 
     private Main application;
 
@@ -36,8 +35,6 @@ public class Main extends Application {
         try {
             stage = firstStage;
             stage.setTitle("fitness group project");
-            stage.setMinWidth(MINIMUM_WINDOW_WIDTH);
-            stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
             stage.show();
 
             LoginController ft = (LoginController) replaceSceneContent("LoginController.fxml");

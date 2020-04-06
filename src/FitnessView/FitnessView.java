@@ -3,6 +3,8 @@ package FitnessView;
 
 public class FitnessView {
 
+    //TODO: REMOVE SINCE NOW COVERED WITH FXML
+
     public void welcomeScreen() {
         System.out.println("welcome to our fitness app for IST311");
         System.out.println("select an option below by entering the corresponding number");

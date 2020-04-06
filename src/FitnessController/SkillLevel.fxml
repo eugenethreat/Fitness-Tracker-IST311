@@ -15,20 +15,24 @@
     <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
           xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
         <children>
-            <ComboBox editable="true" layoutX="112.0" layoutY="323.0" prefWidth="150.0"/>
-            <Label layoutX="100.0" layoutY="296.0" text="Please select your skill level ">
+            <ComboBox editable="false" layoutX="112.0" layoutY="323.0" prefWidth="150.0" fx:id="levelBox"
+            onAction="#levelSelected"
+            />
+
+            <Label layoutX="100.0" layoutY="296.0" text="Please select your skill level">
                 <font>
                     <Font name="Tahoma" size="14.0"/>
                 </font>
             </Label>
+
             <Button layoutX="43.0" layoutY="165.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="115.0"
-                    text="Weight Lifting">
+                    text="Weight Lifting" fx:id="weightliftButton" onAction="#onWeightButtonPress">
                 <font>
                     <Font name="Tahoma" size="15.0"/>
                 </font>
             </Button>
             <Button layoutX="217.0" layoutY="165.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="115.0"
-                    text="Cardio">
+                    text="Cardio" fx:id="cardioButton" onAction="#onCardioButtonPress">
                 <font>
                     <Font name="Tahoma" size="15.0"/>
                 </font>
@@ -39,6 +43,13 @@
                     <Font name="Tahoma" size="17.0"/>
                 </font>
             </Label>
+           <Button layoutX="112.0" layoutY="400.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="115.0"
+                   text="give me a plan!" fx:id="makePlanButton" onAction="#makePlan">
+              <font>
+                 <Font name="Tahoma" size="15.0"/>
+              </font>
+           </Button>
+
         </children>
     </Pane>
 
