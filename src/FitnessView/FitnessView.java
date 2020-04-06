@@ -28,6 +28,10 @@ public class FitnessView {
     public void loggedIn(String user) {
         System.out.println("Welcome, " + user + "!");
         System.out.println("from here, users will be able to view their workouts, view their progression, etc.");
+
+        System.out.println("select an option: ");
+        System.out.println("1: Setting goals and level:");
+
     }
 
     public void failed() {

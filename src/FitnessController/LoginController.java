@@ -3,11 +3,29 @@ package FitnessController;
 import FitnessModel.Login;
 import FitnessModel.User;
 import FitnessView.FitnessView;
+import com.sun.tools.javac.Main;
+import javafx.fxml.Initializable;
+import javafx.scene.layout.AnchorPane;
 
-public class FitnessController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class LoginController extends AnchorPane implements Initializable {
+
+    //public AnchorPane LoginController;
 
     FitnessView view = new FitnessView();
     Login login;
+
+    private Main app;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+    }
+
+
+    public LoginController(){
+    }
 
     public void loggingIn() {
         login = new Login();
@@ -33,6 +51,8 @@ public class FitnessController {
             view.failed();
         }
     }
+
+
 
 
 }
