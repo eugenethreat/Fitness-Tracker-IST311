@@ -62,7 +62,6 @@ public class Main extends Application {
     public void gotoSurvey(){
         try {
             goalSurvey goals = (goalSurvey) replaceSceneContent("SkillLevel.fxml");
-            System.out.println("where am I");
             goals.setApp(this);
 
         } catch (Exception ex) {

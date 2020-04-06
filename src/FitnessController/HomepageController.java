@@ -25,7 +25,7 @@ public class HomepageController extends AnchorPane implements Initializable {
     }//no-arg constructor
 
     public void goToSurvey(ActionEvent event){
-        System.out.println("go to sruvey");
+        app.gotoSurvey();
     }
 
 
