@@ -11,7 +11,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.InputStream;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
