@@ -77,10 +77,10 @@ public class Main extends Application {
 
     }
     
-    public void gotoExercise(){
+    public void gotoExercise(String type){
         try {
-            
             SelectExerciseController exercise = (SelectExerciseController) replaceSceneContent("SelectExercise.fxml");
+            exercise.getExerciseType(type);
             exercise.setApp(this);
 
         } catch (Exception ex) {

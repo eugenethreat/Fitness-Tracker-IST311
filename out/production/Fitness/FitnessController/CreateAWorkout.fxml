@@ -8,9 +8,12 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane  fx:controller="FitnessController.CreateAWorkoutController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="FitnessController.CreateAWorkoutController"
+   >
+
    <children>
-      <Button id="Button1" onAction="#gotoExercise" layoutX="39.0" layoutY="64.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="108.0" text="Abs">
+      <Button layoutX="39.0" layoutY="64.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="108.0" text="Abs" onAction="#setSpecificButtons">
          <font>
             <Font name="Tahoma Bold" size="15.0" />
          </font>

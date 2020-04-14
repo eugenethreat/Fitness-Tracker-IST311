@@ -7,7 +7,11 @@
 <?import javafx.scene.shape.*?>
 
 
-<AnchorPane fx:controller="FitnessController.SelectExerciseController"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+
+   fx:controller="FitnessController.SelectExerciseController"
+   >
+
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3f4143" height="59.0" stroke="BLACK" strokeType="INSIDE" width="368.0" />
       <Label layoutX="88.0" layoutY="10.0" prefHeight="40.0" prefWidth="193.0" text="Select Excercise" textFill="WHITE">
@@ -15,11 +19,14 @@
             <Font name="Tahoma Bold" size="23.0" />
          </font>
       </Label>
-      <Button id="Button1" layoutY="74.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="368.0" text="Button" />
-      <Button id="Button2" layoutY="382.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="368.0" text="Button" />
-      <Button id="Button3" layoutY="224.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="368.0" text="Button" />
-      <Button id="Button4" layoutY="150.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="368.0" text="Button" />
-      <Button id="Button5" layoutX="1.0" layoutY="303.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="368.0" text="Button" />
-      <Button id="Button6" layoutX="160.0" layoutY="471.0" mnemonicParsing="false" text="Back " />
+      <Button layoutY="74.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="368.0" text="Button" fx:id="Button1"/>
+      <Button layoutY="382.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="368.0" text="Button" fx:id="Button2"/>
+      <Button layoutY="224.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="368.0" text="Button" fx:id="Button3"/>
+
+      <Button layoutY="150.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="368.0" text="Button" fx:id="Button4" />
+      <Button layoutX="1.0" layoutY="303.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="368.0" text="Button" fx:id="Button5"/>
+
+
+      <Button layoutX="160.0" layoutY="471.0" mnemonicParsing="false" text="Back " /> 
    </children>
 </AnchorPane>
