@@ -30,10 +30,10 @@ public class goalSurvey extends AnchorPane implements Initializable {
 
 
 
-    public void makePlan(ActionEvent actionEvent) {
+    /*public void makePlan(ActionEvent actionEvent) {
     /*
     the method that makes the plan based off of the parameters input by the user
-     */
+     
 
     if(cardio=true && level.equals("noob")){
         System.out.println("medium running!");
@@ -42,6 +42,7 @@ public class goalSurvey extends AnchorPane implements Initializable {
     }
 
     }
+    */
 
     public void onWeightButtonPress(ActionEvent event){
         weights = true;
@@ -70,6 +71,10 @@ public class goalSurvey extends AnchorPane implements Initializable {
 
     public void setApp(FitnessController.Main main) {
         app = main;
+    }
+    
+    public void makePlan(ActionEvent event){
+        app.gotoWorkout();
     }
 
 }

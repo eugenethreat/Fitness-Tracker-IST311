@@ -2,7 +2,7 @@ package FitnessController;
 
 import FitnessModel.User;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
+
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
@@ -65,7 +65,31 @@ public class Main extends Application {
         }
 
     }
+    
+    public void gotoWorkout(){
+        try {
+            CreateAWorkoutController workout = (CreateAWorkoutController) replaceSceneContent("CreateAWorkout.fxml");
+            workout.setApp(this);
 
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+    
+    public void gotoExercise(){
+        try {
+            
+            SelectExerciseController exercise = (SelectExerciseController) replaceSceneContent("SelectExercise.fxml");
+            exercise.setApp(this);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+    
+    
 
     private Initializable replaceSceneContent(String fxml) throws Exception {
         FXMLLoader loader = new FXMLLoader();

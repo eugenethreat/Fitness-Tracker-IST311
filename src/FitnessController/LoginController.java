@@ -3,7 +3,7 @@ package FitnessController;
 import FitnessModel.Login;
 import FitnessModel.User;
 import FitnessView.FitnessView;
-import com.sun.tools.javac.Main;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
