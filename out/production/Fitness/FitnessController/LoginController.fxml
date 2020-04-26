@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="FitnessController.LoginController"
-            fx:id="LoginController"
->
+<AnchorPane fx:id="LoginController" prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FitnessController.LoginController">
 
     <padding>
-        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
     </padding>
 
 
-    <Label id="label1" layoutX="14.0" layoutY="67.0" text="Username"/>
-    <TextField id="textField1" fx:id="usernameField" layoutY="86.0" prefWidth="415.0" AnchorPane.leftAnchor="10.0"
-               AnchorPane.rightAnchor="0.0"/>
-    <Label id="label1" layoutX="14.0" layoutY="139.0" text="Password"/>
-    <PasswordField id="passwordField1" fx:id="passwordField" layoutY="157.0" prefWidth="415.0"
-                   AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0"/>
+    <Label id="label1" layoutX="153.0" layoutY="317.0" text="Username" />
+    <TextField id="textField1" fx:id="usernameField" layoutX="251.0" layoutY="309.0" prefHeight="34.0" prefWidth="127.0" />
+    <Label id="label1" layoutX="155.0" layoutY="361.0" text="Password" />
+    <PasswordField id="passwordField1" fx:id="passwordField" layoutX="250.0" layoutY="352.0" prefHeight="34.0" prefWidth="127.0" />
 
-    <Button id="loginButton" onAction="#tryToLoginFX" fx:id="loginButton" layoutX="14.0" layoutY="200.0" text="Login" prefWidth="200.0"
-            AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0"/>
+    <Button id="loginButton" fx:id="loginButton" layoutX="156.0" layoutY="458.0" onAction="#tryToLoginFX" prefHeight="25.0" prefWidth="189.0" text="Login" />
+   <Label layoutX="153.0" layoutY="73.0" prefHeight="79.0" prefWidth="294.0" text="FitNesst ">
+      <font>
+         <Font size="55.0" />
+      </font>
+   </Label>
+   <Label layoutX="117.0" layoutY="154.0" prefHeight="40.0" prefWidth="316.0" text="Home to all your fitness needs">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
     <!-- LOGIN BUTTON -->
 
 </AnchorPane>

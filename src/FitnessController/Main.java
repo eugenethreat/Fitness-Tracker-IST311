@@ -110,6 +110,17 @@ public class Main extends Application {
         }
     }
 
+    public void goToDropDown(){
+        try {
+            WorkoutDropdownController drop = (WorkoutDropdownController) replaceSceneContent("workoutDropdown.fxml");
+            drop.setApp(this);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+
 
     private Initializable replaceSceneContent(String fxml) throws Exception {
         FXMLLoader loader = new FXMLLoader();
