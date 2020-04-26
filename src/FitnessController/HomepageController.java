@@ -15,27 +15,33 @@ public class HomepageController extends AnchorPane implements Initializable {
 
     private Main app;
 
-    @FXML Label usernameField;
+    @FXML
+    Label usernameField;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     }
 
-    public HomepageController(){
+    public HomepageController() {
 
     }//no-arg constructor
 
-    public void goToSurvey(ActionEvent event){
+    public void goToSurvey(ActionEvent event) {
         app.gotoSurvey();
     }
 
-    public void goToWorkouts(ActionEvent event){
+    public void goToWorkouts(ActionEvent event) {
         app.goToWorkout();
     }
 
-    public void setUsernameField(String username){
+    public void goToDropDown(ActionEvent event) {
+        app.goToDropDown();
+    }
+
+    public void setUsernameField(String username) {
         usernameField.setText(username);
     }
+
 
     public void setApp(FitnessController.Main main) {
         this.app = main;
