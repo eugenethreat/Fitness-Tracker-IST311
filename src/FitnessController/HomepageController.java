@@ -3,9 +3,7 @@ package FitnessController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
@@ -27,11 +25,11 @@ public class HomepageController extends AnchorPane implements Initializable {
     }//no-arg constructor
 
     public void goToSurvey(ActionEvent event) {
-        app.gotoSurvey();
+        app.goToSurvey();
     }
 
     public void goToWorkouts(ActionEvent event) {
-        app.goToWorkout();
+        app.goToAllWorkouts();
     }
 
     public void goToDropDown(ActionEvent event) {

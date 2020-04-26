@@ -1,6 +1,9 @@
 package FitnessController;
 
 import FitnessModel.User;
+import depreciated.CreateAWorkoutController;
+import depreciated.SelectExerciseController;
+import depreciated.goalSurvey;
 import javafx.application.Application;
 
 import javafx.fxml.FXMLLoader;
@@ -41,7 +44,7 @@ public class Main extends Application {
 
     }
 
-    public void gotoHome() {
+    public void goToHome() {
         try {
             HomepageController home = (HomepageController) replaceSceneContent("HomepageController.fxml");
             home.setUsernameField(loggedUser.getUsername());
@@ -52,7 +55,7 @@ public class Main extends Application {
         }
     }
 
-    public void gotoHome(User logged) { //for first time login, sets the loggeduser.
+    public void goToHome(User logged) { //for first time login, sets the loggeduser.
         try {
             loggedUser = logged;
             HomepageController home = (HomepageController) replaceSceneContent("HomepageController.fxml");
@@ -64,7 +67,7 @@ public class Main extends Application {
         }
     }
 
-    public void gotoSurvey() {
+    public void goToSurvey() {
         try {
             goalSurvey goals = (goalSurvey) replaceSceneContent("SkillLevel.fxml");
             goals.setApp(this);
@@ -75,7 +78,7 @@ public class Main extends Application {
 
     }
 
-    public void gotoWorkout() {
+    public void goToCreateWorkout() {
         try {
             CreateAWorkoutController workout = (CreateAWorkoutController) replaceSceneContent("CreateAWorkout.fxml");
             workout.setApp(this);
@@ -86,7 +89,7 @@ public class Main extends Application {
 
     }
 
-    public void gotoExercise(String type) {
+    public void goToSelectExercise(String type) {
         try {
             SelectExerciseController exercise = (SelectExerciseController) replaceSceneContent("SelectExercise.fxml");
             exercise.getExerciseType(type);
@@ -98,9 +101,9 @@ public class Main extends Application {
 
     }
 
-    public void goToWorkout() {
+    public void goToAllWorkouts() {
         try {
-            WorkoutsController workouts = (WorkoutsController) replaceSceneContent("workouts.fxml");
+            AllWorkoutsController workouts = (AllWorkoutsController) replaceSceneContent("AllWorkouts.fxml");
             workouts.setApp(this);
             workouts.setHandlers();
             workouts.setWorkoutFields();
@@ -110,9 +113,9 @@ public class Main extends Application {
         }
     }
 
-    public void goToDropDown(){
+    public void goToDropDown() {
         try {
-            WorkoutDropdownController drop = (WorkoutDropdownController) replaceSceneContent("workoutDropdown.fxml");
+            CreateWorkoutDropdownController drop = (CreateWorkoutDropdownController) replaceSceneContent("CreateWorkoutDropdown.fxml");
             drop.setApp(this);
 
         } catch (Exception ex) {
@@ -121,6 +124,31 @@ public class Main extends Application {
     }
 
 
+    public void goToRecent() {
+        //todo
+    }
+
+    public void goToCurrent() {
+        try {
+            CurrentWorkoutController current = (CurrentWorkoutController) replaceSceneContent("CurrentWorkout.fxml");
+            current.setApp(this);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void goToFuture() {
+        //todo
+    }
+
+    public User getLoggedUser() {
+        return loggedUser;
+    }
+
+    public void setLoggedUser(User toTest) {
+        loggedUser = toTest;
+    }
 
     private Initializable replaceSceneContent(String fxml) throws Exception {
         FXMLLoader loader = new FXMLLoader();
@@ -140,29 +168,4 @@ public class Main extends Application {
         return (Initializable) loader.getController();
     }
 
-
-    public void goToRecent() {
-    }
-
-    public void goToCurrent() {
-        try {
-            CurrentWorkoutController current = (CurrentWorkoutController) replaceSceneContent("CurrentWorkout.fxml");
-            current.setApp(this);
-
-        } catch (Exception ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    public void goToFuture() {
-    }
-
-    public User getLoggedUser() {
-        System.out.println("emmy");
-        return loggedUser;
-    }
-
-    public void setLoggedUser(User toTest) {
-        loggedUser = toTest;
-    }
 }

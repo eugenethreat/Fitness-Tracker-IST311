@@ -22,7 +22,7 @@ import javafx.scene.layout.AnchorPane;
  */
 
 
-public class WorkoutDropdownController  extends AnchorPane implements Initializable {
+public class CreateWorkoutDropdownController extends AnchorPane implements Initializable {
 
     @FXML
     public ComboBox<String> exercise1Group;
@@ -46,7 +46,7 @@ public class WorkoutDropdownController  extends AnchorPane implements Initializa
     private Main app;
     
     public void goBack(){
-        app.gotoHome();
+        app.goToHome();
     }
     
     public void saveWorkout(){

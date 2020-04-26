@@ -20,7 +20,7 @@ public class CurrentWorkoutController extends AnchorPane implements Initializabl
     }
 
     public void gotoHome(){
-        application.gotoHome();
+        application.goToHome();
     }
 
 

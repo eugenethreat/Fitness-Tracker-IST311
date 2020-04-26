@@ -18,7 +18,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class WorkoutsController extends AnchorPane implements Initializable {
+public class AllWorkoutsController extends AnchorPane implements Initializable {
 
     Main application;
     @FXML

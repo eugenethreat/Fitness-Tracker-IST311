@@ -2,7 +2,6 @@ package FitnessController;
 
 import FitnessModel.Login;
 import FitnessModel.User;
-import FitnessView.FitnessView;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -68,7 +67,7 @@ public class LoginController extends AnchorPane implements Initializable {
             //System.out.println("success");
             System.out.println(toTest.getWorkout().getAllExercises().toString());
             app.setLoggedUser(toTest);
-            app.gotoHome(toTest);
+            app.goToHome(toTest);
 
             //replace with method that changes scenes
 
