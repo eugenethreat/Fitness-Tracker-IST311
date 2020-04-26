@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="148.0" layoutY="34.0" text="Workout">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+      </Label>
+      <ListView layoutX="14.0" layoutY="91.0" prefHeight="258.0" prefWidth="226.0" />
+      <CheckBox layoutX="260.0" layoutY="91.0" mnemonicParsing="false" text="Exercise1" />
+      <CheckBox layoutX="260.0" layoutY="202.0" mnemonicParsing="false" text="Exercise2" />
+      <CheckBox layoutX="260.0" layoutY="331.0" mnemonicParsing="false" text="Exercise3" />
+      <Button layoutX="72.0" layoutY="365.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="111.0" text="Finish Workout" />
+      <Button layoutX="160.0" layoutY="491.0" mnemonicParsing="false" text="Home" />
+   </children>
+</AnchorPane>
