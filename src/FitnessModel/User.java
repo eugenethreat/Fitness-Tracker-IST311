@@ -3,6 +3,7 @@ package FitnessModel;
 public class User {
     private String username;
     private String password;
+    private Workout workout;
 
     public User(String username, String password) {
         this.password = password;
@@ -23,6 +24,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void setWorkout(Workout w){
+        this.workout = w;
+    }
+
+    public Workout getWorkout(){
+        return workout;
     }
 
 

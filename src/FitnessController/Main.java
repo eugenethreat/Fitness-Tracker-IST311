@@ -24,10 +24,6 @@ public class Main extends Application {
     private Stage stage;
     private User loggedUser;
 
-
-    private Main application;
-
-
     @Override
     public void start(Stage firstStage) throws Exception {
 
@@ -68,7 +64,7 @@ public class Main extends Application {
         }
     }
 
-    public void gotoSurvey(){
+    public void gotoSurvey() {
         try {
             goalSurvey goals = (goalSurvey) replaceSceneContent("SkillLevel.fxml");
             goals.setApp(this);
@@ -78,8 +74,8 @@ public class Main extends Application {
         }
 
     }
-    
-    public void gotoWorkout(){
+
+    public void gotoWorkout() {
         try {
             CreateAWorkoutController workout = (CreateAWorkoutController) replaceSceneContent("CreateAWorkout.fxml");
             workout.setApp(this);
@@ -89,8 +85,8 @@ public class Main extends Application {
         }
 
     }
-    
-    public void gotoExercise(String type){
+
+    public void gotoExercise(String type) {
         try {
             SelectExerciseController exercise = (SelectExerciseController) replaceSceneContent("SelectExercise.fxml");
             exercise.getExerciseType(type);
@@ -102,18 +98,18 @@ public class Main extends Application {
 
     }
 
-    public void goToWorkout(){
+    public void goToWorkout() {
         try {
             WorkoutsController workouts = (WorkoutsController) replaceSceneContent("workouts.fxml");
-            workouts.setHandlers();
             workouts.setApp(this);
+            workouts.setHandlers();
+            workouts.setWorkoutFields();
 
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    
+
 
     private Initializable replaceSceneContent(String fxml) throws Exception {
         FXMLLoader loader = new FXMLLoader();
@@ -148,5 +144,14 @@ public class Main extends Application {
     }
 
     public void goToFuture() {
+    }
+
+    public User getLoggedUser() {
+        System.out.println("emmy");
+        return loggedUser;
+    }
+
+    public void setLoggedUser(User toTest) {
+        loggedUser = toTest;
     }
 }

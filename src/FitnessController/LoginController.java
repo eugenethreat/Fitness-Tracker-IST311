@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class LoginController extends AnchorPane implements Initializable {
@@ -47,11 +48,26 @@ public class LoginController extends AnchorPane implements Initializable {
 
         login = new Login();
 
-        User toTest = new User(usernameString, passwordString);
+        //User toTest = new User(usernameString, passwordString);
+        //this needs to be the user with the matching username;
+
+        ArrayList<User> a = Login.testUsers; //STATIC!
+        //this is shit code that will be changed later
+        User toTest = null;
+        for(User u : a){
+            if(usernameString.equals(u.getUsername())){
+                toTest = u;
+            }
+        }//iterates through, seeing if the entered text matches a user
+
+
+
         boolean success = login.test(toTest);
         if (success) {
             //view.loggedIn(user);
             //System.out.println("success");
+            System.out.println(toTest.getWorkout().getAllExercises().toString());
+            app.setLoggedUser(toTest);
             app.gotoHome(toTest);
 
             //replace with method that changes scenes
