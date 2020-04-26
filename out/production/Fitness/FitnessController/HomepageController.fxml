@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="FitnessController.HomepageController"
-            fx:id="fitnessController"
-            >
+<AnchorPane fx:id="fitnessController" prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FitnessController.HomepageController">
 
 
 
         <padding>
-            <Insets left="10.0" right="10.0" top="10.0"/>
+            <Insets left="10.0" right="10.0" top="10.0" />
         </padding>
-
-
-        <Hyperlink id="label1" layoutX="14.0" layoutY="67.0" text="go to survey" onAction="#goToSurvey"/>
-
-        <Label id="label1" layoutX="14.0" layoutY="139.0" text="gua"/>
+   <Button layoutX="21.0" layoutY="122.0" mnemonicParsing="false" onAction="#goToSurvey" prefHeight="214.0" prefWidth="223.0" text="Survey " />
+   <Button layoutX="280.0" layoutY="122.0" mnemonicParsing="false" onAction="#goToWorkouts" prefHeight="214.0" prefWidth="223.0" text="Workouts" />
+   <Separator layoutX="14.0" layoutY="58.0" prefHeight="14.0" prefWidth="495.0" />
+   <Label layoutX="21.0" layoutY="14.0" prefHeight="38.0" prefWidth="106.0" text="Welcome,">
+      <font>
+         <Font size="22.0" />
+      </font>
+   </Label>
+   <Label fx:id="usernameField" layoutX="125.0" layoutY="14.0" prefHeight="38.0" prefWidth="106.0" text="user">
+      <font>
+         <Font size="22.0" />
+      </font>
+   </Label>
+   <Button layoutX="21.0" layoutY="365.0" mnemonicParsing="false" onAction="#goToSurvey" prefHeight="214.0" prefWidth="223.0" text="Progress" />
+   <Button layoutX="280.0" layoutY="365.0" mnemonicParsing="false" onAction="#goToSurvey" prefHeight="214.0" prefWidth="223.0" text="Profile" />
 
 
 </AnchorPane>
-
-
-

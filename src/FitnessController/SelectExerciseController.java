@@ -66,7 +66,7 @@ public class SelectExerciseController implements Initializable {
             Button3.setText("SOME BACK EXERCISE");
             Button4.setText("SOME BACK EXERCISE");
             Button5.setText("SOME BACK EXERCISE");
-            
+
         } else {
             System.out.println("NOT WORKING!!!!!");
             //unit testing is overrated pt 2

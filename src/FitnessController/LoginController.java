@@ -51,8 +51,8 @@ public class LoginController extends AnchorPane implements Initializable {
         boolean success = login.test(toTest);
         if (success) {
             //view.loggedIn(user);
-            System.out.println("success");
-            app.gotoHome();
+            //System.out.println("success");
+            app.gotoHome(toTest);
 
             //replace with method that changes scenes
 

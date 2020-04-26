@@ -48,6 +48,19 @@ public class Main extends Application {
     public void gotoHome() {
         try {
             HomepageController home = (HomepageController) replaceSceneContent("HomepageController.fxml");
+            home.setUsernameField(loggedUser.getUsername());
+            home.setApp(this);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void gotoHome(User logged) { //for first time login, sets the loggeduser.
+        try {
+            loggedUser = logged;
+            HomepageController home = (HomepageController) replaceSceneContent("HomepageController.fxml");
+            home.setUsernameField(loggedUser.getUsername());
             home.setApp(this);
 
         } catch (Exception ex) {
@@ -88,6 +101,17 @@ public class Main extends Application {
         }
 
     }
+
+    public void goToWorkout(){
+        try {
+            WorkoutsController workouts = (WorkoutsController) replaceSceneContent("workouts.fxml");
+            workouts.setHandlers();
+            workouts.setApp(this);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
     
 
@@ -103,11 +127,26 @@ public class Main extends Application {
             in.close();
         }
 
-        Scene scene = new Scene(page, 800, 600);
+        Scene scene = new Scene(page, 500, 800);
         stage.setScene(scene);
         stage.sizeToScene();
         return (Initializable) loader.getController();
     }
 
 
+    public void goToRecent() {
+    }
+
+    public void goToCurrent() {
+        try {
+            CurrentWorkoutController current = (CurrentWorkoutController) replaceSceneContent("CurrentWorkout.fxml");
+            current.setApp(this);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void goToFuture() {
+    }
 }

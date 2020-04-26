@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FitnessController.CurrentWorkoutController">
    <children>
       <Label layoutX="111.0" layoutY="33.0" text="Current Workout">
          <font>
@@ -14,7 +12,7 @@
          </font>
       </Label>
       <ListView layoutX="41.0" layoutY="71.0" prefHeight="365.0" prefWidth="293.0" />
-      <Button layoutX="72.0" layoutY="474.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="78.0" text="Home" />
+      <Button layoutX="72.0" layoutY="474.0" mnemonicParsing="false" onAction="#gotoHome" prefHeight="36.0" prefWidth="78.0" text="Home" />
       <Button layoutX="212.0" layoutY="474.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="104.0" text="Start Workout">
          <font>
             <Font name="Tahoma" size="13.0" />

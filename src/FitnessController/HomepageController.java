@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
@@ -13,8 +15,7 @@ public class HomepageController extends AnchorPane implements Initializable {
 
     private Main app;
 
-    @FXML
-    Hyperlink linkToSurvey;
+    @FXML Label usernameField;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -28,6 +29,13 @@ public class HomepageController extends AnchorPane implements Initializable {
         app.gotoSurvey();
     }
 
+    public void goToWorkouts(ActionEvent event){
+        app.goToWorkout();
+    }
+
+    public void setUsernameField(String username){
+        usernameField.setText(username);
+    }
 
     public void setApp(FitnessController.Main main) {
         this.app = main;
