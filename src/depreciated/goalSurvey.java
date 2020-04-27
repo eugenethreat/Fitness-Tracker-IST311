@@ -1,4 +1,4 @@
-package FitnessController;
+package depreciated;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -74,7 +74,7 @@ public class goalSurvey extends AnchorPane implements Initializable {
     }
     
     public void makePlan(ActionEvent event){
-        app.gotoWorkout();
+        app.goToCreateWorkout();
     }
 
 }

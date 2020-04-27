@@ -1,4 +1,4 @@
-package FitnessView;
+package depreciated.FitnessView;
 
 
 public class FitnessView {

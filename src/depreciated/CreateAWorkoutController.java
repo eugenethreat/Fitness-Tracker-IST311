@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package FitnessController;
+package depreciated;
 
 import FitnessController.Main;
 import java.net.URL;
@@ -64,7 +64,7 @@ public class CreateAWorkoutController implements Initializable {
     }
 
     public void goToExercise(String type){
-        app.gotoExercise(type);
+        app.goToSelectExercise(type);
     } //goes to the page that has the empty buttons with specific exercises per muscle group. the passed string is the muscle group.
 
     
