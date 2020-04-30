@@ -21,38 +21,25 @@ public class Login {
         boolean exists = false;
 
         try {
-            //todo : check credentials from the passed user.
-
-            //Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
             String dbuser = "root";
             String password = "toor";
-            String protocol = "jdbc:derby:";
-            String fitness = "//localhost:1527/Fitness;";
-            Connection conn = DriverManager.getConnection(protocol + fitness, dbuser, password);
+            String protocol = "jdbc:derby://localhost:1527/Fitness;";
+            Connection conn = DriverManager.getConnection(protocol, dbuser, password);
+            //conecting to the db 
 
             Statement st = conn.createStatement();
-
             ResultSet res = st.executeQuery("SELECT * FROM USERS");
+            //gets results from teh db and saves them 
 
             while (res.next()) {
                 User fromDb = new User(res.getString(2), res.getString(3));
+                //serializing into a user object - 2 is username, 3 is password
+                hardcodeWorkouts(fromDb);
+                testUsers.add(fromDb); //adding to static list  
 
-                Exercise a = new Exercise("squat", 10, 10);
-                Exercise b = new Exercise("leg press", 10, 10);
-                Exercise c = new Exercise("some arm thing", 10, 10);
-                Workout w = new Workout(a, b, c);
-                fromDb.setWorkout(w);
-
-                testUsers.add(fromDb);
-
-                //2 is username 
-                //3 is pw
             }
             res.close();
-
-            for (User u : testUsers) {
-                System.out.println(u.getUsername());
-            }
+            conn.close(); //cleaning up 
 
             for (int i = 0; i < testUsers.size(); ++i) {
                 if (user.getUsername().equals(testUsers.get(i).getUsername())) {
@@ -62,7 +49,8 @@ public class Login {
                     }
 
                 }
-            }//if the username is equal, checks the password. else, exits.
+            }//checks if the credentials are correct; 
+            //if the username is equal, checks the password. else, exits.
 
         } catch (SQLException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
@@ -70,5 +58,14 @@ public class Login {
 
         return exists;
     }
+
+    public void hardcodeWorkouts(User fromDb) {
+        Exercise a = new Exercise("squat", 10, 10);
+        Exercise b = new Exercise("leg press", 10, 10);
+        Exercise c = new Exercise("some arm thing", 10, 10);
+        Workout w = new Workout(a, b, c);
+        fromDb.setWorkout(w);
+
+    }   //hardcoding workouts for demo purposess 
 
 }

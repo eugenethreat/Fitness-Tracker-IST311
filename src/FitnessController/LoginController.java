@@ -11,12 +11,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class LoginController extends AnchorPane implements Initializable {
-
-    //public AnchorPane LoginController;
 
     Login login;
 
@@ -37,46 +34,41 @@ public class LoginController extends AnchorPane implements Initializable {
     private Button loginButton;
 
     public void tryToLoginFX(ActionEvent event) {
-        //System.out.println("cute thing ");
 
         String usernameString = getUsernameField().getText();
         String passwordString = getPasswordField().getText();
 
-        //System.out.println(usernameString + passwordString);
-        //testing output
-
+  
         login = new Login();
-
         User toTest = new User(usernameString, passwordString);
-        //this is an arbitrayr user made of the entered credentials 
+        //arbitrary user with the temp credentials 
         
         boolean success = login.test(toTest);
-        if (success) {
-            //view.loggedIn(user);
-            /*
-            need totest to be one of the users from the static array
-            so they have exercises for now ...
-            */
+        if (success) {       
             int index = 0;
             for(int i = 0 ; i < Login.testUsers.size() ; ++i){
-                //get the index of th euesr 
+                //get the index of the uesr 
                 String usernameToMatch = toTest.getUsername();
                 if(usernameToMatch.equals(Login.testUsers.get(i))) {
                     index = i;
                 }
-            }
-            toTest = Login.testUsers.get(index);
+            } // shit garbage 
             
-            System.out.println("success");
-            //System.out.println(toTest.getWorkout().getAllExercises().toString());
+            toTest = Login.testUsers.get(index);
+            /*
+            sets toTest to the equivalent user from the static list
+            so that exercises can be accessed; 
+            
+            this should be changed to anything else 
+            */
+            
             app.setLoggedUser(toTest);
-            app.goToHome(toTest);
-
-            //replace with method that changes scenes
+            app.goToHome(toTest); 
+            //goes to the home screen of the logged in user!  
 
         } else {
             //view.failed();
-            System.out.println("failed");
+            System.out.println("Login failed");
             //replace with javafx that says that the login failed
         }
 
