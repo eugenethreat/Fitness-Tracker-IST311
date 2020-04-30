@@ -8,11 +8,11 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="311Fitness_NETBEANS.jar" size="25978" download="eager" />
+    <jar href="311Fitness_NETBEANS.jar" size="26494" download="eager" />
+    <jar href="lib\derby.jar" size="3232770" download="eager" />
+    <jar href="lib\derbyclient.jar" size="588394" download="eager" />
+    <jar href="lib\derbynet.jar" size="272626" download="eager" />
   </resources>
-  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="311Fitness_NETBEANS" >
-    <param name="requiredFXVersion" value="8.0+"/>
-  </applet-desc>
   <jfx:javafx-desc  width="800" height="600" main-class="FitnessController.Main"  name="311Fitness_NETBEANS" />
   <update check="always"/>
 </jnlp>

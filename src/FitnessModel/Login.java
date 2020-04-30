@@ -2,6 +2,13 @@ package FitnessModel;
 
 import java.util.ArrayList;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Login {
 
     public static ArrayList<User> testUsers = new ArrayList<User>();
@@ -17,12 +24,12 @@ public class Login {
         User someUser4 = new User("Wilson Hafner", "1010");
         //later, these will be stored in a database.
 
-            Exercise a = new Exercise("squat", 10,10);
-            Exercise b = new Exercise("leg press", 10,10);
-            Exercise c = new Exercise("some arm thing", 10,10);
-            Workout w = new Workout(a,b,c);
-            someUser1.setWorkout(w);
-            //TEST METHODS - WILL BE MOVED LATER
+        Exercise a = new Exercise("squat", 10, 10);
+        Exercise b = new Exercise("leg press", 10, 10);
+        Exercise c = new Exercise("some arm thing", 10, 10);
+        Workout w = new Workout(a, b, c);
+        someUser1.setWorkout(w);
+        //TEST METHODS - WILL BE MOVED LATER
 
         testUsers.add(someUser1);
         testUsers.add(someUser2);
@@ -31,19 +38,37 @@ public class Login {
     }
 
     public boolean test(User user) {
-        //todo : check credentials from the passed user.
         boolean exists = false;
 
-        for (int i = 0; i < testUsers.size(); ++i) {
-            if (user.getUsername().equals(testUsers.get(i).getUsername())) {
+        try {
+            //todo : check credentials from the passed user.
 
-                if (user.getPassword().equals(testUsers.get(i).getPassword())) {
-                    exists = true;
+            //Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+            
+            String dbuser = "root";
+            String password = "toor";
+            String protocol = "jdbc:derby:";
+            String fitness = "//localhost:1527/Fitness;";
+            Connection conn = DriverManager.getConnection(protocol + fitness, dbuser, password);
+
+            
+            
+            
+            
+            for (int i = 0; i < testUsers.size(); ++i) {
+                if (user.getUsername().equals(testUsers.get(i).getUsername())) {
+
+                    if (user.getPassword().equals(testUsers.get(i).getPassword())) {
+                        exists = true;
+                    }
+
                 }
+            }//if the username is equal, checks the password. else, exits.
 
-            }
-        }//if the username is equal, checks the password. else, exits.
-
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         return exists;
     }
 
