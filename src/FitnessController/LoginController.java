@@ -47,25 +47,28 @@ public class LoginController extends AnchorPane implements Initializable {
 
         login = new Login();
 
-        //User toTest = new User(usernameString, passwordString);
-        //this needs to be the user with the matching username;
-
-        ArrayList<User> a = Login.testUsers; //STATIC!
-        //this is shit code that will be changed later
-        User toTest = null;
-        for(User u : a){
-            if(usernameString.equals(u.getUsername())){
-                toTest = u;
-            }
-        }//iterates through, seeing if the entered text matches a user
-
-
-
+        User toTest = new User(usernameString, passwordString);
+        //this is an arbitrayr user made of the entered credentials 
+        
         boolean success = login.test(toTest);
         if (success) {
             //view.loggedIn(user);
-            //System.out.println("success");
-            System.out.println(toTest.getWorkout().getAllExercises().toString());
+            /*
+            need totest to be one of the users from the static array
+            so they have exercises for now ...
+            */
+            int index = 0;
+            for(int i = 0 ; i < Login.testUsers.size() ; ++i){
+                //get the index of th euesr 
+                String usernameToMatch = toTest.getUsername();
+                if(usernameToMatch.equals(Login.testUsers.get(i))) {
+                    index = i;
+                }
+            }
+            toTest = Login.testUsers.get(index);
+            
+            System.out.println("success");
+            //System.out.println(toTest.getWorkout().getAllExercises().toString());
             app.setLoggedUser(toTest);
             app.goToHome(toTest);
 
