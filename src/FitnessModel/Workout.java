@@ -16,8 +16,15 @@ public class Workout {
     }
 
     public ArrayList<Exercise> getAllExercises() {
-        return (new ArrayList<Exercise>(
-                List.of(ex1, ex2, ex3)));
+        //return (new ArrayList<Exercise>(List.of(ex1, ex2, ex3)));
+       
+        ArrayList<Exercise> list = new ArrayList<>();
+        list.add(ex1);
+        list.add(ex2);
+        list.add(ex3);
+        
+        return(list);
+    
     }
 
 

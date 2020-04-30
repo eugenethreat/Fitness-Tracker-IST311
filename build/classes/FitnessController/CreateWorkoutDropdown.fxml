@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FitnessController.WorkoutDropdownController">
+<AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FitnessController.CreateWorkoutDropdownController">
    <children>
       <Label alignment="CENTER" layoutX="158.0" layoutY="14.0" prefHeight="49.0" prefWidth="201.0" text="Create A Workout">
          <font>
