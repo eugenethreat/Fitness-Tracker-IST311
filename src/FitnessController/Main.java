@@ -232,9 +232,13 @@ public class Main extends Application {
 
     public void goToProgression() {
         try {
-            ProgressionChartController chart = (ProgressionChartController) replaceSceneContent("ProgressionChart.fxml");
+            ProgressionChartController chart = new ProgressionChartController();
             chart.setApp(this);
-            chart.setGraph();
+            //chart.setGraph();
+            
+            Scene progressionScene = new Scene(chart.setGraph(this.getLoggedUser()));
+            stage.setScene(progressionScene);
+            
 
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
