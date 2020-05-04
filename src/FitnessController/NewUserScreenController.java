@@ -39,6 +39,13 @@ public class NewUserScreenController implements Initializable {
         
         System.out.println("got to getinfosenddb");
         
+        /*
+        after this, needs to go to survey to generate a 
+        workout to be sent to db
+        */
+        
+        app.goToSurvey();
+        
         
     }
     

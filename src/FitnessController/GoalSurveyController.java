@@ -1,4 +1,4 @@
-package depreciated;
+package FitnessController;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,7 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class goalSurvey extends AnchorPane implements Initializable {
+public class GoalSurveyController extends AnchorPane implements Initializable {
 
     private FitnessController.Main app;
 
@@ -29,21 +29,6 @@ public class goalSurvey extends AnchorPane implements Initializable {
     String[] possibleLevels = {"noob", "intermediate", "advanced"};
 
 
-
-    /*public void makePlan(ActionEvent actionEvent) {
-    /*
-    the method that makes the plan based off of the parameters input by the user
-     
-
-    if(cardio=true && level.equals("noob")){
-        System.out.println("medium running!");
-    } else{
-        System.out.println("some other plan");
-    }
-
-    }
-    */
-
     public void onWeightButtonPress(ActionEvent event){
         weights = true;
         cardio = false;
@@ -58,6 +43,7 @@ public class goalSurvey extends AnchorPane implements Initializable {
 
     public void levelSelected(ActionEvent event){
         level = levelBox.getValue().toString();
+        System.out.println(level);
     }
 
     @Override
@@ -65,7 +51,7 @@ public class goalSurvey extends AnchorPane implements Initializable {
         levelBox.getItems().setAll("noob", "intermediate", "advanced");
     }
 
-    public goalSurvey(){
+    public GoalSurveyController(){
 
     }//no-arg constructor
 
@@ -74,7 +60,7 @@ public class goalSurvey extends AnchorPane implements Initializable {
     }
     
     public void makePlan(ActionEvent event){
-        app.goToCreateWorkout();
+        app.goToCreateWorkout(cardio, level);
     }
 
 }

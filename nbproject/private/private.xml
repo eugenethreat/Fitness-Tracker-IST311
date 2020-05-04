@@ -5,8 +5,16 @@
         <group>
             <file>file:/C:/Users/eugene/Box%20Sync/sp20/ist311/fitness%20project/Fitness_UPDATE/src/FitnessModel/Callable.java</file>
             <file>file:/C:/Users/eugene/Box%20Sync/sp20/ist311/fitness%20project/Fitness_UPDATE/src/FitnessController/LoginController.java</file>
+            <file>file:/C:/Users/eugene/Box%20Sync/sp20/ist311/fitness%20project/Fitness_UPDATE/src/FitnessController/ProgressionChartController.java</file>
+            <file>file:/C:/Users/eugene/Box%20Sync/sp20/ist311/fitness%20project/Fitness_UPDATE/src/FitnessModel/WorkoutGenerator.java</file>
+            <file>file:/C:/Users/eugene/Box%20Sync/sp20/ist311/fitness%20project/Fitness_UPDATE/src/FitnessModel/Exercise.java</file>
+            <file>file:/C:/Users/eugene/Box%20Sync/sp20/ist311/fitness%20project/Fitness_UPDATE/src/FitnessController/Main.java</file>
             <file>file:/C:/Users/eugene/Box%20Sync/sp20/ist311/fitness%20project/Fitness_UPDATE/src/FitnessModel/Login.java</file>
+            <file>file:/C:/Users/eugene/Box%20Sync/sp20/ist311/fitness%20project/Fitness_UPDATE/src/FitnessController/ProgressionChart.fxml</file>
+            <file>file:/C:/Users/eugene/Box%20Sync/sp20/ist311/fitness%20project/Fitness_UPDATE/src/FitnessController/GoalSurveyController.java</file>
             <file>file:/C:/Users/eugene/Box%20Sync/sp20/ist311/fitness%20project/Fitness_UPDATE/src/FitnessController/AllWorkoutsController.java</file>
+            <file>file:/C:/Users/eugene/Box%20Sync/sp20/ist311/fitness%20project/Fitness_UPDATE/src/FitnessController/NewUserScreenController.java</file>
+            <file>file:/C:/Users/eugene/Box%20Sync/sp20/ist311/fitness%20project/Fitness_UPDATE/src/FitnessController/HomepageController.java</file>
         </group>
     </open-files>
 </project-private>

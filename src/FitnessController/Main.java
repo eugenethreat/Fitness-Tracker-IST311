@@ -1,8 +1,13 @@
 package FitnessController;
 
 import FitnessModel.User;
-import depreciated.CreateAWorkoutController;
-import depreciated.SelectExerciseController;
+import FitnessModel.Workout;
+import FitnessModel.WorkoutGenerator;
+
+import FitnessController.GoalSurveyController;
+import FitnessModel.Callable;
+import static FitnessModel.Callable.getAllUsers;
+
 import javafx.application.Application;
 
 import javafx.fxml.FXMLLoader;
@@ -13,6 +18,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -68,7 +77,9 @@ public class Main extends Application {
 
     public void goToSurvey() {
         try {
-            goalSurvey goals = (goalSurvey) replaceSceneContent("SkillLevel.fxml");
+            System.out.println(":D :D :D :D:D ");
+
+            GoalSurveyController goals = (GoalSurveyController) replaceSceneContent("GoalSurveyController.fxml");
             goals.setApp(this);
 
         } catch (Exception ex) {
@@ -77,10 +88,69 @@ public class Main extends Application {
 
     }
 
+    void goToCreateWorkout(boolean cardio, String level) {
+
+        try {
+
+            WorkoutGenerator gen = new WorkoutGenerator(cardio, level);
+            Workout newWorkout = gen.makeWorkoutForNewUser();
+
+            System.out.println("workout " + newWorkout);
+
+            ResultSet allUsers = Callable.getAllUsers();
+            int id = 0;
+
+            try {
+                while (allUsers.next()) {
+                    //stuff
+                    id++;
+                } //getting the last one. very inefficient solution since it parses the whole table.
+            } catch (SQLException ex) {
+                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            //id++; //id of the laste person + 1
+            String prefix = "SELECT * FROM USERS WHERE ID=" + id;
+            //  ("SELECT * FROM WORKOUTS WHERE ID=" + stringValToGet);
+
+            Connection conn = Callable.callToDb();
+            Statement st = conn.createStatement();
+
+            ResultSet res;
+            res = st.executeQuery(prefix);
+
+            while (res.next()) {
+
+                String username = res.getString(2);
+                String password = res.getString(3);
+                User newlyLoggedUser = new User(username, password);
+
+                //needs to be set to the last user, since the last will be the most recent.
+                this.setLoggedUser(newlyLoggedUser);
+                System.out.println(" user " + this.getLoggedUser().toString());
+
+                this.getLoggedUser().setWorkout(newWorkout);
+
+                this.goToHome(newlyLoggedUser);
+
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
     public void goToCreateWorkout() {
         try {
-            CreateAWorkoutController workout = (CreateAWorkoutController) replaceSceneContent("CreateAWorkout.fxml");
-            workout.setApp(this);
+
+            //CreateAWorkoutController workout = (CreateAWorkoutController) replaceSceneContent("CreateAWorkout.fxml");
+            //workout.setApp(this);
+            /*
+            should be changed to generate a workout and go to the homescreen 
+            for it to be viewed 
+             */
+            this.goToHome();
 
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -165,7 +235,7 @@ public class Main extends Application {
             ProgressionChartController chart = (ProgressionChartController) replaceSceneContent("ProgressionChart.fxml");
             chart.setApp(this);
             chart.setGraph();
-            
+
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
