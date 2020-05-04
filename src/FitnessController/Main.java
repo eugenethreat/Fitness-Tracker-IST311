@@ -3,7 +3,6 @@ package FitnessController;
 import FitnessModel.User;
 import depreciated.CreateAWorkoutController;
 import depreciated.SelectExerciseController;
-import depreciated.goalSurvey;
 import javafx.application.Application;
 
 import javafx.fxml.FXMLLoader;
@@ -123,7 +122,6 @@ public class Main extends Application {
         }
     }
 
-
     public void goToRecent() {
         //todo
     }
@@ -140,6 +138,37 @@ public class Main extends Application {
 
     public void goToFuture() {
         //todo
+    }
+
+    public void goToNewAccount() {
+        try {
+            NewUserScreenController newAccount = (NewUserScreenController) replaceSceneContent("NewUserScreen.fxml");
+            newAccount.setApp(this);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void goToLogin() {
+        try {
+            LoginController ft = (LoginController) replaceSceneContent("LoginController.fxml");
+            ft.setApp(this);
+
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void goToProgression() {
+        try {
+            ProgressionChartController chart = (ProgressionChartController) replaceSceneContent("ProgressionChart.fxml");
+            chart.setApp(this);
+            chart.setGraph();
+            
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public User getLoggedUser() {

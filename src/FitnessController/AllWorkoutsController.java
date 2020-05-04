@@ -2,17 +2,11 @@ package FitnessController;
 
 import FitnessModel.Exercise;
 import FitnessModel.User;
-import FitnessModel.Workout;
-import javafx.application.Application;
-import javafx.event.EventHandler;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-
-
-import javafx.scene.input.MouseEvent;
-
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -27,7 +21,6 @@ public class AllWorkoutsController extends AnchorPane implements Initializable {
     Label currentLabel;
     @FXML
     Label futureLabel;
-
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -72,9 +65,7 @@ public class AllWorkoutsController extends AnchorPane implements Initializable {
         a = "CURRENT:" + "\n" + one + "\n" + two + "\n" + three;
         futureLabel.setText(a);
 
-
     }//sets the values to the correct things.
-
 
     public void setHandlers() {
         recentLabel.setOnMouseClicked(e -> {
@@ -88,7 +79,6 @@ public class AllWorkoutsController extends AnchorPane implements Initializable {
         });
 
     }//setting handlers to register clicks on the labels
-
 
     public void setApp(Main main) {
         application = main;

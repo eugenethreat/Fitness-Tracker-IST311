@@ -2,11 +2,8 @@ package FitnessModel;
 
 import java.util.ArrayList;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -21,25 +18,23 @@ public class Login {
         boolean exists = false;
 
         try {
-            String dbuser = "root";
-            String password = "toor";
-            String protocol = "jdbc:derby://localhost:1527/Fitness;";
-            Connection conn = DriverManager.getConnection(protocol, dbuser, password);
-            //conecting to the db 
 
-            Statement st = conn.createStatement();
-            ResultSet res = st.executeQuery("SELECT * FROM USERS");
+            ResultSet res = Callable.getAllUsers();
+            //cleaning up db code 
+
             //gets results from teh db and saves them 
-
             while (res.next()) {
                 User fromDb = new User(res.getString(2), res.getString(3));
+                fromDb.setId(Integer.parseInt(res.getString(1)));
                 //serializing into a user object - 2 is username, 3 is password
+                testUsers.add(fromDb); //adding to static list
+
                 hardcodeWorkouts(fromDb);
-                testUsers.add(fromDb); //adding to static list  
+                //adding the workout 
 
             }
             res.close();
-            conn.close(); //cleaning up 
+            //cleaning up connection  
 
             for (int i = 0; i < testUsers.size(); ++i) {
                 if (user.getUsername().equals(testUsers.get(i).getUsername())) {
@@ -59,13 +54,37 @@ public class Login {
         return exists;
     }
 
-    public void hardcodeWorkouts(User fromDb) {
-        Exercise a = new Exercise("squat", 10, 10);
-        Exercise b = new Exercise("leg press", 10, 10);
-        Exercise c = new Exercise("some arm thing", 10, 10);
-        Workout w = new Workout(a, b, c);
-        fromDb.setWorkout(w);
+    public void hardcodeWorkouts(User fromDb) throws SQLException {
 
-    }   //hardcoding workouts for demo purposess 
+        //System.out.println(" :D " + fromDb.getId());
+
+        ResultSet someWorkout = Callable.getWorkout(fromDb);
+
+        //System.out.println("got the rs");
+
+        if (someWorkout.next()) {
+
+            String ex1 = someWorkout.getString(2);
+            String ex2 = someWorkout.getString(4);
+            String ex3 = someWorkout.getString(6);
+            int re1 = Integer.parseInt(someWorkout.getString(3));
+            int re2 = Integer.parseInt(someWorkout.getString(5));
+            int re3 = Integer.parseInt(someWorkout.getString(7));
+            int we1 = Integer.parseInt(someWorkout.getString(8));
+            int we2 = Integer.parseInt(someWorkout.getString(9));
+            int we3 = Integer.parseInt(someWorkout.getString(10));
+            //good code LOL 
+
+            Exercise a = new Exercise(ex1, re1, we1);
+            Exercise b = new Exercise(ex2, re2, we2);
+            Exercise c = new Exercise(ex3, re3, we3);
+
+            Workout workoutFromDb = new Workout(a, b, c);
+
+            fromDb.setWorkout(workoutFromDb);
+
+        }
+
+    }
 
 }

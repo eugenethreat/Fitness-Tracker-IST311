@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="FitnessController.NewUserScreenController">
+   <children>
+      <Label layoutX="147.0" layoutY="82.0" prefHeight="79.0" prefWidth="294.0" text="FitNesst ">
+         <font>
+            <Font size="55.0" />
+         </font>
+      </Label>
+      <Label layoutX="111.0" layoutY="163.0" prefHeight="40.0" prefWidth="316.0" text="Home to all your fitness needs">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label id="label1" layoutX="163.0" layoutY="331.0" text="Username" />
+      <TextField id="textField1" fx:id="usernameField" layoutX="261.0" layoutY="323.0" prefHeight="34.0" prefWidth="127.0" />
+      <Label id="label1" layoutX="165.0" layoutY="375.0" text="Password" />
+      <PasswordField id="passwordField1" fx:id="passwordField" layoutX="260.0" layoutY="366.0" prefHeight="34.0" prefWidth="127.0" />
+      <Label layoutX="111.0" layoutY="266.0" prefHeight="40.0" prefWidth="316.0" text="Enter new account information ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="173.0" layoutY="491.0" mnemonicParsing="false" onAction="#getInfoSendToDb" prefHeight="40.0" prefWidth="134.0" text="Register " />
+      <Button layoutX="163.0" layoutY="561.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="48.0" prefWidth="134.0" text="return to login " />
+   </children>
+</AnchorPane>

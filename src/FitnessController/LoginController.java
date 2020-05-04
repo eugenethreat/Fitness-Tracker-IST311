@@ -73,6 +73,23 @@ public class LoginController extends AnchorPane implements Initializable {
         }
 
     }
+    
+    public void goToNewAccount(ActionEvent event){
+        //goes about creating a new account and adding it. 
+        
+        /*
+        needs to get a new username and password 
+        needs to use the survey to get goals 
+        create a workout 
+        
+        add everything to the database. 
+        
+        */
+        System.out.println("in logincontroller");
+        app.goToNewAccount();
+        
+        
+    }
 
 
     public TextField getUsernameField() {

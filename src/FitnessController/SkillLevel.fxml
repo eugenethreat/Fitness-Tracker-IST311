@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="surveyController" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="depreciated.goalSurvey">
+
+    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+        <children>
+            <ComboBox fx:id="levelBox" editable="false" layoutX="163.0" layoutY="365.0" onAction="#levelSelected" prefWidth="150.0" />
+
+            <Label layoutX="151.0" layoutY="338.0" text="Please select your skill level">
+                <font>
+                    <Font name="Tahoma" size="14.0" />
+                </font>
+            </Label>
+
+            <Button fx:id="weightliftButton" layoutX="92.0" layoutY="215.0" mnemonicParsing="false" onAction="#onWeightButtonPress" prefHeight="56.0" prefWidth="115.0" text="Weight Lifting">
+                <font>
+                    <Font name="Tahoma" size="15.0" />
+                </font>
+            </Button>
+            <Button fx:id="cardioButton" layoutX="266.0" layoutY="215.0" mnemonicParsing="false" onAction="#onCardioButtonPress" prefHeight="56.0" prefWidth="115.0" text="Cardio">
+                <font>
+                    <Font name="Tahoma" size="15.0" />
+                </font>
+            </Button>
+            <Label layoutX="130.0" layoutY="122.0" prefHeight="65.0" prefWidth="213.0" text="Select type of exercise plan ">
+                <font>
+                    <Font name="Tahoma" size="17.0" />
+                </font>
+            </Label>
+           <Button fx:id="makePlanButton" layoutX="186.0" layoutY="485.0" mnemonicParsing="false" onAction="#makePlan" prefHeight="56.0" prefWidth="115.0" text="give me a plan!">
+              <font>
+                 <Font name="Tahoma" size="15.0" />
+              </font>
+           </Button>
+
+        </children>
+    </Pane>
+
+</AnchorPane>

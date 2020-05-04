@@ -35,6 +35,10 @@ public class HomepageController extends AnchorPane implements Initializable {
     public void goToDropDown(ActionEvent event) {
         app.goToDropDown();
     }
+    
+    public void goToProgression(ActionEvent event){
+        app.goToProgression();
+    }
 
     public void setUsernameField(String username) {
         usernameField.setText(username);

@@ -1,41 +1,7 @@
-Thu Apr 30 14:10:50 EDT 2020 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
+Sun May 03 15:31:06 EDT 2020 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Thu Apr 30 14:10:50 EDT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0171-cc48-b9ae-ffffb08e62bf 
-on database directory C:\Users\eugene\Box Sync\sp20\ist311\fitness project\Fitness_UPDATE\db\sample with class loader sun.misc.Launcher$AppClassLoader@5e2de80c 
-Loaded from file:/C:/Program%20Files/db-derby-10.14.2.0-bin/db-derby-10.14.2.0-bin/lib/derby.jar
-java.vendor=AdoptOpenJDK
-java.runtime.version=1.8.0_242-b08
-user.dir=C:\Program Files\db-derby-10.14.2.0-bin\db-derby-10.14.2.0-bin
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=C:\Users\eugene\Box Sync\sp20\ist311\fitness project\Fitness_UPDATE\db
-Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Thu Apr 30 14:11:52 EDT 2020:
-Shutting down instance a816c00e-0171-cc48-b9ae-ffffb08e62bf on database directory C:\Users\eugene\Box Sync\sp20\ist311\fitness project\Fitness_UPDATE\db\sample with class loader sun.misc.Launcher$AppClassLoader@5e2de80c 
-Thu Apr 30 14:11:52 EDT 2020 Thread[DRDAConnThread_3,5,main] (DATABASE = sample), (DRDAID = {2}), Database 'sample' shutdown.
-----------------------------------------------------------------
-Thu Apr 30 14:12:09 EDT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance c0f7802d-0171-cc48-b9ae-ffffb08e62bf 
-on database directory C:\Users\eugene\Box Sync\sp20\ist311\fitness project\Fitness_UPDATE\db\Fitness with class loader sun.misc.Launcher$AppClassLoader@5e2de80c 
-Loaded from file:/C:/Program%20Files/db-derby-10.14.2.0-bin/db-derby-10.14.2.0-bin/lib/derby.jar
-java.vendor=AdoptOpenJDK
-java.runtime.version=1.8.0_242-b08
-user.dir=C:\Program Files\db-derby-10.14.2.0-bin\db-derby-10.14.2.0-bin
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=C:\Users\eugene\Box Sync\sp20\ist311\fitness project\Fitness_UPDATE\db
-Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Thu Apr 30 14:12:10 EDT 2020:
-Shutting down instance c0f7802d-0171-cc48-b9ae-ffffb08e62bf on database directory C:\Users\eugene\Box Sync\sp20\ist311\fitness project\Fitness_UPDATE\db\Fitness with class loader sun.misc.Launcher$AppClassLoader@5e2de80c 
-Thu Apr 30 14:12:10 EDT 2020 Thread[DRDAConnThread_3,5,main] (DATABASE = Fitness), (DRDAID = {4}), Database 'Fitness' shutdown.
-----------------------------------------------------------------
-Thu Apr 30 14:12:58 EDT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance bc9ec0ce-0171-cc48-b9ae-ffffb08e62bf 
+Sun May 03 15:31:06 EDT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0171-dc05-4b4d-ffffb08e62bf 
 on database directory C:\Users\eugene\Box Sync\sp20\ist311\fitness project\Fitness_UPDATE\db\Fitness with class loader sun.misc.Launcher$AppClassLoader@5e2de80c 
 Loaded from file:/C:/Program%20Files/db-derby-10.14.2.0-bin/db-derby-10.14.2.0-bin/lib/derby.jar
 java.vendor=AdoptOpenJDK
