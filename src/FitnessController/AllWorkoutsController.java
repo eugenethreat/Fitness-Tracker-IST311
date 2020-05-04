@@ -56,13 +56,13 @@ public class AllWorkoutsController extends AnchorPane implements Initializable {
         one = first.getName() + " | Weight: " + (first.getWeight() - 5) + " x " + first.getReps() + " reps";
         two = second.getName() + " | Weight: " + (second.getWeight() - 5) + " x " + second.getReps() + " reps";
         three = third.getName() + " | Weight: " + (third.getWeight() - 5) + " x " + third.getReps() + " reps";
-        a = "CURRENT:" + "\n" + one + "\n" + two + "\n" + three;
+        a = "RECENT:" + "\n" + one + "\n" + two + "\n" + three;
         recentLabel.setText(a);
 
         one = first.getName() + " | Weight: " + (first.getWeight() + 5) + " x " + first.getReps() + " reps";
         two = second.getName() + " | Weight: " + (second.getWeight() + 5) + " x " + second.getReps() + " reps";
         three = third.getName() + " | Weight: " + (third.getWeight() + 5) + " x " + third.getReps() + " reps";
-        a = "CURRENT:" + "\n" + one + "\n" + two + "\n" + three;
+        a = "FUTURE:" + "\n" + one + "\n" + two + "\n" + three;
         futureLabel.setText(a);
 
     }//sets the values to the correct things.
@@ -82,5 +82,9 @@ public class AllWorkoutsController extends AnchorPane implements Initializable {
 
     public void setApp(Main main) {
         application = main;
+    }
+    
+    public void goToHome(){
+        application.goToHome();
     }
 }

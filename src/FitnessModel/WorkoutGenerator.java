@@ -25,13 +25,13 @@ public class WorkoutGenerator {
 
     }//constructor
 
-    ArrayList<String> cardioEasy = new ArrayList<>(Arrays.asList("running", "stuff"));
-    ArrayList<String> cardioMed = new ArrayList<>(Arrays.asList("im", "stuff"));
-    ArrayList<String> cardioHard = new ArrayList<>(Arrays.asList("im", "stuff"));
+    ArrayList<String> cardioEasy = new ArrayList<>(Arrays.asList("EASY CARDIO EXERCISE"));
+    ArrayList<String> cardioMed = new ArrayList<>(Arrays.asList("MEDIUM CARDIO EXERCISE"));
+    ArrayList<String> cardioHard = new ArrayList<>(Arrays.asList("HARD CARDIO EXERCISE"));
 
-    ArrayList<String> weightEasy = new ArrayList<>(Arrays.asList("dumbbell curl", "stuff"));
-    ArrayList<String> weightMed = new ArrayList<>(Arrays.asList("im", "stuff"));
-    ArrayList<String> weightHard = new ArrayList<>(Arrays.asList("im", "stuff"));
+    ArrayList<String> weightEasy = new ArrayList<>(Arrays.asList("EASY WEIGHT EXERCISE"));
+    ArrayList<String> weightMed = new ArrayList<>(Arrays.asList("MEDIUM WEIGHT EXERCISE"));
+    ArrayList<String> weightHard = new ArrayList<>(Arrays.asList("HARD WEIGHT EXERICSE"));
 
     public Workout makeWorkoutForNewUser() {
         //takes parameters and creates a new workout based off of them.

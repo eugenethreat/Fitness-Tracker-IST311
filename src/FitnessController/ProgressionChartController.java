@@ -94,14 +94,15 @@ public class ProgressionChartController implements Initializable {
 
         AnchorPane pane = new AnchorPane(progressionChart);
         pane.setPrefSize(500, 800);
-        
+
         Button returnButton = new Button("return");
-        returnButton.setOnAction(new EventHandler<ActionEvent>(){
+        returnButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 app.goToHome();
-            }}); //jank shit code for returning 
-              
+            }
+        }); //jank shit code for returning 
+
         pane.getChildren().add(returnButton);
 
         return pane;

@@ -7,8 +7,8 @@ public class Exercise {
 
     public Exercise(String n, int w, int r){
         name = n;
-        weight = w;
-        reps = r;
+        weight = r;
+        reps = w;
     }
     //An exercise has a name, weight and reps.
 

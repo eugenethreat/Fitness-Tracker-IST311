@@ -1,5 +1,6 @@
 package FitnessController;
 
+import depreciated.SelectExerciseController;
 import FitnessModel.User;
 import FitnessModel.Workout;
 import FitnessModel.WorkoutGenerator;
@@ -133,7 +134,7 @@ public class Main extends Application {
 
                 this.goToHome(newlyLoggedUser);
 
-            }
+            } //this should all really be in callable, but ...
 
         } catch (SQLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);

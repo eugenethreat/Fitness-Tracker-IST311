@@ -15,7 +15,7 @@
             <Insets left="10.0" right="10.0" top="10.0" />
         </padding>
    <Button layoutX="21.0" layoutY="122.0" mnemonicParsing="false" onAction="#goToDropDown" prefHeight="214.0" prefWidth="223.0" text="Survey " />
-   <Button layoutX="270.0" layoutY="122.0" mnemonicParsing="false" onAction="#goToWorkouts" prefHeight="214.0" prefWidth="223.0" text="Workouts" />
+   <Button layoutX="266.0" layoutY="122.0" mnemonicParsing="false" onAction="#goToWorkouts" prefHeight="214.0" prefWidth="223.0" text="Workouts" />
    <Separator layoutX="14.0" layoutY="58.0" prefHeight="14.0" prefWidth="495.0" />
    <Label layoutX="21.0" layoutY="14.0" prefHeight="38.0" prefWidth="106.0" text="Welcome,">
       <font>
@@ -28,7 +28,6 @@
       </font>
    </Label>
    <Button layoutX="21.0" layoutY="365.0" mnemonicParsing="false" onAction="#goToProgression" prefHeight="214.0" prefWidth="223.0" text="Progress" />
-   <Button layoutX="270.0" layoutY="365.0" mnemonicParsing="false" onAction="#goToSurvey" prefHeight="214.0" prefWidth="223.0" text="Profile" />
 
 
 </AnchorPane>
